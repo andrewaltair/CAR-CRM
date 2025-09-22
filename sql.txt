@@ -1,0 +1,87 @@
+-- Создание базы данных
+CREATE DATABASE IF NOT EXISTS `trending_qwen` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `trending_qwen`;
+-- Таблица пользователей
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `username` VARCHAR(50) NOT NULL UNIQUE,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `role` ENUM('admin', 'vehicle_manager', 'photo_manager', 'payment_manager') DEFAULT 'vehicle_manager',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Таблица транспортных средств
+CREATE TABLE IF NOT EXISTS `vehicles` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `vin` VARCHAR(17) NOT NULL UNIQUE,
+  `make` VARCHAR(50),
+  `model` VARCHAR(50),
+  `year` INT,
+  `type` VARCHAR(50),
+  -- `color` VARCHAR(30), -- REMOVED FIELD
+  `price` DECIMAL(10,2) NOT NULL,
+  `from_location` VARCHAR(100) NOT NULL,
+  `from_state` VARCHAR(2) NOT NULL,
+  `to_location` VARCHAR(100) NOT NULL,
+  `to_state` VARCHAR(2) NOT NULL,
+  `distance` VARCHAR(50),
+  `estimated_time` VARCHAR(50),
+  `pickup_date` DATE NOT NULL,
+  `delivery_date` DATE NULL,
+  `payment_status` ENUM('paid', 'pending', 'unpaid') DEFAULT 'unpaid',
+  `fines` DECIMAL(10,2) DEFAULT 0.00,
+  `transporter_contact` VARCHAR(100) NULL,
+  `transporter_phone` VARCHAR(20) NULL,
+  `transporter_email` VARCHAR(100) NULL,
+  `auction` VARCHAR(50) NOT NULL,
+  `warehouse` VARCHAR(50) NOT NULL,
+  `appointment` BOOLEAN DEFAULT 0, -- Checkbox 1
+  `auction_reservation` BOOLEAN DEFAULT 0, -- Checkbox 2
+  `notes` TEXT,
+  `is_archived` BOOLEAN DEFAULT 0,
+  `archive_reason` TEXT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Таблица для комментариев
+CREATE TABLE IF NOT EXISTS `vehicle_comments` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `vehicle_id` INT NOT NULL,
+    `user_id` INT NOT NULL,
+    `comment` TEXT NOT NULL,
+    `image_path` VARCHAR(255) NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`id`) ON DELETE CASCADE,
+    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Таблица для изображений
+CREATE TABLE IF NOT EXISTS `vehicle_images` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `vehicle_id` INT NOT NULL,
+    `image_type` ENUM('pre', 'post', 'document') NOT NULL,
+    `image_path` VARCHAR(255) NOT NULL,
+    `uploaded_by` INT NOT NULL,
+    `image_order` INT DEFAULT 0,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`id`) ON DELETE CASCADE,
+    FOREIGN KEY (`uploaded_by`) REFERENCES `users`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Таблица для проблемных транспортных средств (архив)
+CREATE TABLE IF NOT EXISTS `problem_vehicles` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `vin` VARCHAR(17) NOT NULL,
+  `driver_phone` VARCHAR(20) NULL,
+  `problem_type` VARCHAR(50) NOT NULL,
+  `description` TEXT,
+  `reported_by` INT NOT NULL,
+  `reported_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`reported_by`) REFERENCES `users`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Создание первого пользователя-администратора (Пароль: admin)
+INSERT INTO `users` (`username`, `password`, `email`, `role`) VALUES
+('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin@trendingnow.ge', 'admin');
+-- Пример данных для транспортных средств
+INSERT INTO `vehicles` (`vin`, `make`, `model`, `year`, `type`, `price`, `from_location`, `from_state`, `to_location`, `to_state`, `distance`, `estimated_time`, `pickup_date`, `delivery_date`, `transporter_contact`, `transporter_phone`, `transporter_email`, `auction`, `warehouse`, `appointment`, `auction_reservation`, `notes`) VALUES
+('KMHDH4AE3EU123833', 'Hyundai', 'Elantra', 2014, 'Sedan', 230.00, 'Baltimore', 'MD', 'Newark', 'NJ', '250 miles', '4-5 hours', '2025-09-17', NULL, 'John Doe', '+11239313354', 'customer@example.com', 'Copart', 'Jax AUTO', 1, 1, 'Vehicle has minor scratches on the rear bumper.'),
+('1G1YW2D72K5118926', 'Chevrolet', 'Camaro', 2019, 'Coupe', 130.00, 'Los Angeles', 'CA', 'San Jose', 'CA', '120 miles', '2-3 hours', '2025-09-18', '2025-09-19', 'Jane Smith', '+14567890123', 'jane@transporter.com', 'Manheim', 'LA Port', 0, 1, 'Requires careful loading.');

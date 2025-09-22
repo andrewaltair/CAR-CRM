@@ -1,0 +1,307 @@
+/* Custom styles for comments section */
+.comment-form textarea {
+    padding: 1rem; /* Увеличиваем внутренний отступ для текста */
+    border-radius: 0.5rem; /* Более мягкие углы */
+    border: 1px solid #cbd5e1; /* Немного темнее граница */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); /* Внутренняя тень */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.comment-form textarea:focus {
+    border-color: #3b82f6; /* Синяя граница при фокусе */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Легкая синяя тень при фокусе */
+    outline: none; /* Убираем стандартный аутлайн браузера */
+}
+
+/* Ensure comment items also have consistent padding */
+.comment-item {
+    padding-left: 1rem; /* Отступ слева для элементов комментария */
+    padding-right: 1rem; /* Отступ справа для элементов комментария */
+}
+
+/* New CSS for image gallery styling (from details.php) */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+}
+
+/* Styles for Image Drop Zones (from details.php) */
+.drop-area {
+    border: 2px dashed #9ca3af; /* Gray-400 */
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* New style for drag over effect */
+.drop-area.drag-over {
+    border-color: #3b82f6; /* Blue-500 */
+    background-color: #eff6ff; /* Blue-50 */
+}
+
+/* Toggle Switch Styles (from details.php) */
+/* Shared classes for toggle container and label */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EF4444; /* Red-500 (Off state) */
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #10B981; /* Green-500 (On state) */
+}
+
+.toggle-checkbox:checked + .toggle-label:before {
+    transform: translateX(26px);
+}
+
+
+/* New CSS for the modal image gallery */
+
+/* Full-screen modal overlay */
+.gallery-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100; /* High z-index to cover everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content container */
+.gallery-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    background: transparent; /* Transparent background for image viewing */
+}
+
+/* Main image container */
+.modal-main-image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Space between main image and thumbnails */
+    position: relative;
+}
+
+/* Main image style */
+.modal-main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px; /* Optional: smooth corners */
+}
+
+/* Navigation buttons (Prev/Next) */
+.modal-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 110;
+    transition: background 0.3s;
+}
+
+.modal-nav-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#prevMainPhoto {
+    left: 10px;
+}
+
+#nextMainPhoto {
+    right: 10px;
+}
+
+/* Close button */
+#closeMainGallery {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    transition: background 0.3s;
+}
+
+#closeMainGallery:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Thumbnail strip container */
+.modal-thumbnail-strip {
+    /* Set a fixed height for the strip to prevent layout shifts */
+    height: 80px; 
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5); /* Dark background for visibility */
+}
+
+/* Individual thumbnail wrapper */
+.modal-thumbnail-wrapper {
+    display: inline-block;
+    height: 70px; /* Adjusted height for images */
+    width: 100px; /* Fixed width */
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.modal-thumbnail-wrapper.active {
+    border-color: #3b82f6; /* Blue-500 for active thumbnail */
+}
+
+/* Thumbnail image style */
+.modal-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+
+/* Styles for the drag-and-drop placeholder text */
+.drop-area-text {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+}
+
+.drop-area-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    color: #6b7280; /* text-gray-500 */
+    margin: 0 auto 0.25rem;
+}
+
+/* Status for the image uploader */
+.upload-status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: #3b82f6; /* Blue-500 */
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.upload-status.visible {
+    opacity: 1;
+}
+
+/* Fix for toggle-checkbox positioning */
+/* The hidden input checkbox must be absolutely positioned inside the switch container */
+.toggle-checkbox {
+    /* Fix from snippet, but might conflict with internal styles. */
+    /* Let's rely on the base styles and the change in details.php */
+    /* Remove the conflicting transform/position/border properties from the snippet if they cause issues */
+}
+
+
+/* The following were present in the snippet but are either redundant with the new styles or need to be overridden */
+.toggle-checkbox:checked {
+    /* Removed: right: 0; */
+    /* Removed: border-color: #4c4c4c; */
+}
+
+.toggle-checkbox {
+    /* Removed: transform: translateX(0); */
+    /* Removed: transition: transform 0.2s ease-in-out; */
+}
+.toggle-checkbox:checked {
+    /* Removed: transform: translateX(100%); */
+}
+/* Replaced by more semantic and Tailwind-friendly names in details.php */
+.drop-area.drag-over {
+    border-color: #3b82f6; /* Blue-500 */
+    background-color: #eff6ff; /* Blue-50 */
+}
+
+/* Custom styles for comments section (already present, copied for completeness) */
+.comments-container {
+    background-color: #f9fafb; /* Light gray background for the whole section */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.comment-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.comment-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

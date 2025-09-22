@@ -1,0 +1,87 @@
+[21-Sep-2025 18:54:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generateCSRFToken() in /home/trending/gemini.trendingnow.ge/add_vehicle.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/trending/gemini.trendingnow.ge/add_vehicle.php on line 7
+[21-Sep-2025 19:08:43 UTC] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/add_comment.php on line 6
+[21-Sep-2025 19:08:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/add_comment.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/trending/gemini.trendingnow.ge/add_comment.php on line 6
+[21-Sep-2025 19:34:01 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 296
+[21-Sep-2025 19:34:01 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 296
+[21-Sep-2025 19:52:53 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 251
+[21-Sep-2025 19:52:53 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 251
+[21-Sep-2025 20:10:36 UTC] PHP Warning:  include(gallery_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 240
+[21-Sep-2025 20:10:36 UTC] PHP Warning:  include(): Failed opening 'gallery_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 240
+[21-Sep-2025 20:10:36 UTC] PHP Warning:  include(script.js): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 563
+[21-Sep-2025 20:10:36 UTC] PHP Warning:  include(): Failed opening 'script.js' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 563
+[21-Sep-2025 20:19:59 UTC] PHP Warning:  filemtime(): stat failed for style.css in /home/trending/gemini.trendingnow.ge/details.php on line 66
+[21-Sep-2025 20:19:59 UTC] PHP Warning:  filemtime(): stat failed for script.js in /home/trending/gemini.trendingnow.ge/details.php on line 326
+[21-Sep-2025 20:22:55 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/upload_image.php on line 11
+[21-Sep-2025 20:26:07 UTC] PHP Warning:  Undefined array key "unpaid" in /home/trending/gemini.trendingnow.ge/details.php on line 178
+[21-Sep-2025 20:31:05 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/upload_image.php on line 11
+[22-Sep-2025 06:41:06 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "DB_HOST" in /home/trending/gemini.trendingnow.ge/login.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/trending/gemini.trendingnow.ge/login.php on line 21
+[22-Sep-2025 06:48:27 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/login_process.php on line 11
+[22-Sep-2025 06:56:00 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 388
+[22-Sep-2025 06:56:00 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 388
+[22-Sep-2025 06:59:27 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/upload_image.php on line 11
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  Undefined variable $can_manage_photos in /home/trending/gemini.trendingnow.ge/details.php on line 112
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  Undefined variable $can_manage_photos in /home/trending/gemini.trendingnow.ge/details.php on line 112
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  Undefined variable $can_manage_photos in /home/trending/gemini.trendingnow.ge/details.php on line 112
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  Undefined variable $can_manage_photos in /home/trending/gemini.trendingnow.ge/details.php on line 112
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 304
+[22-Sep-2025 07:03:13 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 304
+[22-Sep-2025 07:11:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function renderGallery() in /home/trending/gemini.trendingnow.ge/details.php:201
+Stack trace:
+#0 {main}
+  thrown in /home/trending/gemini.trendingnow.ge/details.php on line 201
+[22-Sep-2025 07:14:46 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/upload_image.php on line 11
+[22-Sep-2025 07:14:54 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/trending/gemini.trendingnow.ge/upload_image.php on line 11
+[22-Sep-2025 07:20:14 UTC] PHP Warning:  include(modals/image_viewer.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 170
+[22-Sep-2025 07:20:14 UTC] PHP Warning:  include(): Failed opening 'modals/image_viewer.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 170
+[22-Sep-2025 07:20:17 UTC] PHP Warning:  include(modals/image_viewer.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 170
+[22-Sep-2025 07:20:17 UTC] PHP Warning:  include(): Failed opening 'modals/image_viewer.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 170
+[22-Sep-2025 07:25:44 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 277
+[22-Sep-2025 07:25:44 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 277
+[22-Sep-2025 07:47:59 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 295
+[22-Sep-2025 07:47:59 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 295
+[22-Sep-2025 08:08:19 UTC] PHP Warning:  include(image_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 318
+[22-Sep-2025 08:08:19 UTC] PHP Warning:  include(): Failed opening 'image_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 318
+[22-Sep-2025 08:15:56 UTC] PHP Warning:  Undefined array key "vin_lookup_confirmation" in /home/trending/gemini.trendingnow.ge/details.php on line 132
+[22-Sep-2025 08:15:56 UTC] PHP Warning:  Undefined array key "vin_lookup_confirmation" in /home/trending/gemini.trendingnow.ge/details.php on line 133
+[22-Sep-2025 08:15:56 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 235
+[22-Sep-2025 08:15:56 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 235
+[22-Sep-2025 08:17:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trending/gemini.trendingnow.ge/details.php:86) in /home/trending/gemini.trendingnow.ge/fetch_images.php on line 6
+[22-Sep-2025 08:18:52 UTC] PHP Warning:  include(payment_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 277
+[22-Sep-2025 08:18:52 UTC] PHP Warning:  include(): Failed opening 'payment_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 277
+[22-Sep-2025 08:22:19 UTC] PHP Warning:  Undefined array key "status" in /home/trending/gemini.trendingnow.ge/details.php on line 100
+[22-Sep-2025 08:22:19 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/trending/gemini.trendingnow.ge/details.php on line 100
+[22-Sep-2025 08:22:19 UTC] PHP Warning:  include(image_gallery_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 331
+[22-Sep-2025 08:22:19 UTC] PHP Warning:  include(): Failed opening 'image_gallery_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 331
+[22-Sep-2025 08:23:37 UTC] PHP Warning:  Undefined array key "status" in /home/trending/gemini.trendingnow.ge/details.php on line 100
+[22-Sep-2025 08:23:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/trending/gemini.trendingnow.ge/details.php on line 100
+[22-Sep-2025 08:23:37 UTC] PHP Warning:  include(image_gallery_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 331
+[22-Sep-2025 08:23:37 UTC] PHP Warning:  include(): Failed opening 'image_gallery_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 331
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 128
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 128
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 136
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 136
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 144
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 144
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 152
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 152
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(image_gallery_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 311
+[22-Sep-2025 08:25:37 UTC] PHP Warning:  include(): Failed opening 'image_gallery_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 311
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 128
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 128
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 136
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 136
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 144
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 144
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(image_upload_area.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 152
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(): Failed opening 'image_upload_area.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 152
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(image_gallery_modal.php): Failed to open stream: No such file or directory in /home/trending/gemini.trendingnow.ge/details.php on line 311
+[22-Sep-2025 08:27:40 UTC] PHP Warning:  include(): Failed opening 'image_gallery_modal.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/trending/gemini.trendingnow.ge/details.php on line 311
